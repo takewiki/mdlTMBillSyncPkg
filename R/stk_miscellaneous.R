@@ -33,7 +33,7 @@ from rds_dms_ods_t_stk_miscellaneous  where FBillTypeID='",FBillTypeID,"'  and F
 #'
 #' @examples
 #' stk_miscellaneous_Fisdo_update()
-stk_miscellaneous_Fisdo_update<- function(dms_token,FBillTypeID,FDEPTID,FDate) {
+stk_miscellaneous_Fisdo_update<- function(dms_token,FBillTypeID,FDEPTID,FDate)) {
   sql1=paste0("
   update a set  a.FIsDo=5,FLogMessage='单据审核成功!'  from rds_dms_ods_t_stk_miscellaneous a where    FBillTypeID='",FBillTypeID,"'  and FDate ='",FDate,"'   and FDEPTID ='",FDEPTID,"'
              ")

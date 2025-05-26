@@ -42,7 +42,7 @@ stk_AssembledApp_Fisdo_update<- function(dms_token,FSrcBillNo,FDate) {
              ")
 
   sql3=paste0("
-  update a set  a.FIsDo=5,FLogMessage='单据审核成功!'  from rds_dms_ods_t_stk_AssembledAppSubEntry a where  FSrcBillNo='",FSrcBillNo,"'  and FDate ='",FDate,"'
+  update a set  a.FIsDo=5 from rds_dms_ods_t_stk_AssembledAppSubEntry a where  FSrcBillNo='",FSrcBillNo,"'  and FDate ='",FDate,"'
              ")
 
   tsda::sql_update2(token  =dms_token ,sql  = sql1)
