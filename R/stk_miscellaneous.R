@@ -1,8 +1,9 @@
 #' 日志查询
 #'
-#' @param dms_token
-#' @param FStartDate
-#' @param FEndDate
+#' @param FBillTypeID 单据类型
+#' @param FDEPTID 部门代码
+#' @param FDate  日期
+#' @param dms_token 口令
 #'
 #' @return
 #' @export
@@ -24,16 +25,17 @@ from rds_dms_ods_t_stk_miscellaneous  where FBillTypeID='",FBillTypeID,"'  and F
 
 #' 更新同步状态
 #'
-#' @param erp_token
-#' @param FStartDate
-#' @param FEndDate
+#' @param dms_token 数据中台
+#' @param FBillTypeID 单据类型
+#' @param FDEPTID 部门代码
+#' @param FDate 日期
 #'
 #' @return
 #' @export
 #'
 #' @examples
 #' stk_miscellaneous_Fisdo_update()
-stk_miscellaneous_Fisdo_update<- function(dms_token,FBillTypeID,FDEPTID,FDate)) {
+stk_miscellaneous_Fisdo_update<- function(dms_token,FBillTypeID,FDEPTID,FDate) {
   sql1=paste0("
   update a set  a.FIsDo=5,FLogMessage='单据审核成功!'  from rds_dms_ods_t_stk_miscellaneous a where    FBillTypeID='",FBillTypeID,"'  and FDate ='",FDate,"'   and FDEPTID ='",FDEPTID,"'
              ")

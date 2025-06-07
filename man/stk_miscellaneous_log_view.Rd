@@ -7,7 +7,13 @@
 stk_miscellaneous_log_view(dms_token, FBillTypeID, FDEPTID, FDate)
 }
 \arguments{
-\item{FEndDate}{}
+\item{dms_token}{口令}
+
+\item{FBillTypeID}{单据类型}
+
+\item{FDEPTID}{部门代码}
+
+\item{FDate}{日期}
 }
 \value{
 
